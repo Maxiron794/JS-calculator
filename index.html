@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Калькулятор
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=1.0, user-scalable=0"/>
+        <meta charset="utf8"/>
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js"></script>
+    </head>
+    <body onload="load()">
+        <main>
+            <div class="calc">
+                <div id="output">
+                    <p id="last"></p>
+                    <p id="window" class="ani1"></p>
+                </div>
+                <table>
+                    <tr>
+                        <td onclick="clear_CA();"><button>CA</button></td>
+                        <td onclick="add_op(`/`)"><button>/</button></td>
+                        <td onclick="add_op(`*`)" ><button>*</button></td>
+                        <td onclick="add_op(`-`)"><button>-</button></td>
+                    </tr>
+                    <tr>
+                        <td onclick="add_text(`7`)"><button>7</button></td>
+                        <td onclick="add_text(`8`)"><button>8</button></td>
+                        <td onclick="add_text(`9`)"><button>9</button></td>
+                        <td rowspan="2" onclick="add_op(`+`)"><button>+</button></td>
+                    </tr>
+                    <tr>
+                        <td onclick="add_text(`4`)"><button>4</button></td>
+                        <td onclick="add_text(`5`)"><button>5</button></td>
+                        <td onclick="add_text(`6`)"><button>6</button></td>
+                    </tr>
+                    <tr>
+                        <td onclick="add_text(`1`)"><button>1</button></td>
+                        <td onclick="add_text(`2`)"><button>2</button></td>
+                        <td onclick="add_text(`3`)"><button>3</button></td>
+                        <td rowspan="2" onclick="solv()"><button>=</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" onclick="add_text(`0`)"><button>0</button></td>
+                        <td onclick="add_text(`.`)"><button>.</button></td>
+                    </tr>
+                    <tr>
+                        <td onclick="add_loop();"><button>(</button></td>
+                        <td onclick="dec_loop()"><button>)</button></td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,1 +1,1 @@
-"# Horse-Race-site" 
+Simple JS calculator
